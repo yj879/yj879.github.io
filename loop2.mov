@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>PNG 무한 루프 배경</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden; /* 스크롤바 제거 */
+            background-color: #0A1126;/* 이미지 로딩 전 배경색 */
+        }
+
+        .loop-image {
+            width: 100vw;
+            height: 100vh;
+            /* 핵심: 이미지가 찌그러지지 않게 화면을 꽉 채움 */
+            object-fit: contain; 
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <img src="./img/loop.mov"  alt="Looping Animation" class="loop-image">
+ 
+
+</body>
+</html>
