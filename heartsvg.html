@@ -3,33 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>heartSVG (iframe 버전)</title>
+    <title>Lottie 무한 루프 배경</title>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <style>
-        /* 1. 기본 여백 제거 및 배경색 설정 */
         body, html {
             margin: 0;
             padding: 0;
             width: 100%;
             height: 100%;
-            overflow: hidden; /* 스크롤바 숨김 */
-            background-color: #000000;
+            overflow: hidden;
+            background-color: #000; /* 배경색 */
         }
 
-        /* 2. iframe을 화면에 꽉 차게 설정 */
-        .svg-frame {
-            position: absolute;
-            top: 0;
-            left: 0;
+        /* 2. 로티 플레이어가 화면을 꽉 채우도록 설정 */
+        lottie-player {
             width: 100vw;
             height: 100vh;
-            border: none; /* 테두리 제거 */
-            display: block;
         }
     </style>
 </head>
 <body>
 
-    <iframe src="./img/heart.svg" class="svg-frame" scrolling="no"></iframe>
+    <lottie-player 
+        src="heart.json" 
+        background="transparent"  
+        speed="1"  
+        loop 
+        autoplay
+        preserveAspectRatio="xMidYMid slice">
+    </lottie-player>
 
 </body>
 </html>
